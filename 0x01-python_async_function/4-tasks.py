@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''_'''
+'''task_wait_random !'''
 import random
 import asyncio
 from typing import List
