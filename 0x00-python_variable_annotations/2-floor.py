@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 type-annotated function floor 
-which takes a float n as argument
+which takes a
+float n as argument
 """
-from math import floor
+import math
 
 
 def floor(n: float) -> int:
