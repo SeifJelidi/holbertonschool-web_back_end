@@ -3,7 +3,7 @@
 type-annotated function floor 
 which takes a float n as argument
 """
-import math
+from math import floor
 
 
 def floor(n: float) -> int:
