@@ -31,11 +31,11 @@ class Server:
     def get_page(self, page: int=1, page_size: int=10) -> List[List]:
         """Simple pagination
         """
-        assert type(page) == int and type(page_size) == int
-        assert page > 0 and page_size > 0
+        assert (type(page) is int and type(page_size) is int)
+        assert (page > 0 and page_size > 0)
         t = index_range(page, page_size)
         start_index = t[0]
         end_index = t[1]
         if start_index >= len(self.dataset()):
             return []
-        return self.dataset()[start_index: end_index]
+        return self.dataset()[start_index:end_index]
