@@ -4,6 +4,7 @@ from typing import List, Tuple
 
 index_range = __import__('0-simple_helper_function').index_range
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -23,7 +24,9 @@ class Server:
 
         return self.__dataset
 
-    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_page(self, page: int=1, page_size: int=10) -> List[List]:
+        """Simple pagination
+        """
         assert type(page) == int and type(page_size) == int
         assert page > 0 and page_size > 0
         t = index_range(page, page_size)
