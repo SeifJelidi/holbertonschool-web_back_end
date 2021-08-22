@@ -35,11 +35,10 @@ class DB:
     def add_user(self, email: str, hashed_password: str) -> User:
         """Add a user to DB
         """
-        user = User(email=email, hashed_password=hashed_password)
-        session = self._session
-        session.add(user)
-        session.commit()
-        return user
+        u = User(email=email, hashed_password=hashed_password)
+        self._session.add(u)
+        self._session.commit()
+        return u
 
     def find_user_by(self, **kwargs) -> User:
         """
