@@ -11,7 +11,7 @@ Base = declarative_base()
 
 class User(Base):
     """
-    Class User with sqlalchemy
+    Class User with Sqlalchemy
     """
     __tablename__ = 'users'
 
