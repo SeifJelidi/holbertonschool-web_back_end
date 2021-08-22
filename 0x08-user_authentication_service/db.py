@@ -32,10 +32,10 @@ class DB:
         return self.__session
 
     def add_user(self, email: str, hashed_password: str) -> User:
+        """Add a user to DB
         """
-        Add a user instance to the session DB
-        """
-        new_user = User(email=email, hashed_password=hashed_password)
-        self._session.add(new_user)
-        self._session.commit()
-        return new_user
+        user = User(email=email, hashed_password=hashed_password)
+        session = self._session
+        session.add(user)
+        session.commit()
+        return user
