@@ -5,13 +5,11 @@ app module
 
 from flask import Flask, render_template, request, flash
 from flask_babel import Babel, _
-from typing import Optional
 import gettext
 import os
 
 app = Flask(__name__)
 babel = Babel(app)
-app.secret_key = os.environ.get("FLASK_SECRET_KEY", "CASA123")
 
 
 class Config:
@@ -39,8 +37,6 @@ def home() -> str:
     """
     Home page
     """
-    flash(_('home_title'))
-    flash(_('home_header'))
     return render_template("3-index.html")
 
 
