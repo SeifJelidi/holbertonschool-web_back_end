@@ -4,6 +4,7 @@ Auth class
 """
 from flask import Flask, jsonify, abort, request
 from typing import List, TypeVar
+from os import getenv
 
 
 class Auth:
